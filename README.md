@@ -5,9 +5,7 @@ The Image Plugin is an Content Based Image Retrieval Plugin for Elasticsearch us
 
 It adds an `image` field type and an `image` query
 
-In order to install the plugin, simply run: `bin\plugin install kiwionly/elasticsearch-image`.
-
-You can create the plugin via gradle via gradle task `gradle plugin`, then unzip to `%elasticsearch%/plugins` folder. 
+Create the plugin via gradle via gradle task `gradle plugin`, then unzip to `%elasticsearch%/plugins` folder.
 
 
 |     Image Plugin          |  elasticsearch    | Release date |
@@ -37,9 +35,11 @@ kiwionly <kiwionly>
 
 ```sh
 {
-    "number_of_shards" : 5,
-    "number_of_replicas" : 2,
-    "index.version.created" : 1070499
+  "settings": {
+    "number_of_shards": 5,
+    "number_of_replicas": 1,
+    "index.version.created": 1070499
+  }
 }
 ```
 
@@ -55,7 +55,7 @@ curl -XPUT 'localhost:9200/test/test/_mapping' -d '{
                 "type": "image",
                 "feature": {
                     "CEDD": {
-                        "hash": "BIT_SAMPLING"
+                        "hash": ["BIT_SAMPLING"]
                     },
                     "JCD": {
                         "hash": ["BIT_SAMPLING", "LSH"]
