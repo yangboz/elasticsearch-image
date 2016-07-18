@@ -40,8 +40,8 @@ repositories {
 dependencies {
 
     compile fileTree(dir: 'lib', include: '*.jar')
-    compile 'org.elasticsearch:elasticsearch:2.3.3'
-    compile ('org.apache.lucene:lucene-core:5.5.1') { transitive = false }
+    compile 'org.elasticsearch:elasticsearch:2.3.4'
+    compile ('org.apache.lucene:lucene-core:5.5.2') { transitive = false }
     compile 'com.drewnoakes:metadata-extractor:2.8.1'
     compile 'com.adobe.xmp:xmpcore:5.1.2'    
 

@@ -10,6 +10,7 @@ Create this plugin using gradle, task `gradle plugin`, then unzip to `%elasticse
 
 |     Image Plugin          |  elasticsearch    | Release date |
 |---------------------------|-------------------|:------------:|
+| 2.3.4                     | 2.3.4             | 2016-07-18   |
 | 2.3.3                     | 2.3.3             | 2016-06-13   |
 | 2.3.2                     | 2.3.2             | 2016-05-16   |
 | 2.2.0                     | 2.2.0             | 2016-03-01   |
@@ -42,7 +43,7 @@ curl -XPUT 'localhost:9200/my_index' -d '{
     "number_of_replicas": 1,
     "index.version.created": 1070499
   }
-}
+}'
 ```
 
 Since elasticsearch 2.2, that is a version checked, index version must set before version 2.0.0 beta 1.
@@ -198,8 +199,11 @@ See [Large image data sets with LIRE ?some new numbers](http://www.semanticmetad
 
 ## ChangeLog
 
+#### 2.3.4 (2016-07-18)
+- upgrade to 2.3.4
+
 #### 2.3.3 (2016-06-13)
-- upgrade to 2.3.3.
+- upgrade to 2.3.3
 
 
 #### 2.3.2 (2016-05-16)
