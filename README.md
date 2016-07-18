@@ -36,7 +36,7 @@ youqian <youqian>
 #### Create Settings
 
 ```sh
-curl -XPUT 'localhost:9200/my_index' -d ' {
+curl -XPUT 'localhost:9200/my_index' -d '{
   "settings": {
     "number_of_shards": 5,
     "number_of_replicas": 1,
