@@ -3,9 +3,9 @@ Image Plugin for Elasticsearch
 
 The Image Plugin is an Content Based Image Retrieval Plugin for Elasticsearch using [LIRE (Lucene Image Retrieval)](https://github.com/dermotte/lire). It allows users to index images and search for similar images.
 
-It adds an `image` field type and an `image` query
+It adds an `image` field type and an `image` query.
 
-Create the plugin via gradle via gradle task `gradle plugin`, then unzip to `%elasticsearch%/plugins` folder.
+Create this plugin using gradle, task `gradle plugin`, then unzip to `%elasticsearch%/plugins` folder, make sure that is not any elastic search image zip file in the plugin folder.
 
 
 |     Image Plugin          |  elasticsearch    | Release date |
@@ -29,12 +29,14 @@ zengde <zengde>
 
 kiwionly <kiwionly>
 
+youqian <youqian>
+
 
 ## Example
 #### Create Settings
 
 ```sh
-{
+curl -XPUT 'localhost:9200/my_image_index' -d ' {
   "settings": {
     "number_of_shards": 5,
     "number_of_replicas": 1,
@@ -48,8 +50,8 @@ Since elasticsearch 2.2, that is a version checked, index version must set befor
 #### Create Mapping
 
 ```sh
-curl -XPUT 'localhost:9200/test/test/_mapping' -d '{
-    "test": {
+curl -XPUT 'localhost:9200/my_image_index/my_image_item/_mapping' -d '{
+    "my_image_item": {
         "properties": {
             "my_img": {
                 "type": "image",
@@ -199,8 +201,10 @@ See [Large image data sets with LIRE ?some new numbers](http://www.semanticmetad
 #### 2.3.3 (2016-06-13)
 - upgrade to 2.3.3.
 
+
 #### 2.3.2 (2016-05-16)
 - fix a JCD feature bug, see [here](https://github.com/visuual/elasticsearch-image/commit/be80790ed23253faf677a8f336da6228e8e3fd82)
+- thanks youqian for 2.3.2 patch.
 
 #### 2.2.0 (2016-03-01)
 - upgrade to lire 1.0b2.

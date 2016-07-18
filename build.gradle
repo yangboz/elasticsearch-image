@@ -20,7 +20,8 @@ task plugin(type: Zip) {
     }
 
     from (configurations.compile) {
-	include 'metadata-extractor**.jar'
+	include 'metadata-extractor*.jar'
+	include 'xmpcore*.jar'
     }
 
     into '/'
@@ -29,8 +30,7 @@ task plugin(type: Zip) {
 task wrapper(type: Wrapper) {
 
     description 'create gradle wrapper'
-
-    gradleVersion = '2.8'
+    gradleVersion = '2.14'
 }
 
 repositories {
@@ -43,6 +43,7 @@ dependencies {
     compile 'org.elasticsearch:elasticsearch:2.3.3'
     compile ('org.apache.lucene:lucene-core:5.5.1') { transitive = false }
     compile 'com.drewnoakes:metadata-extractor:2.8.1'
+    compile 'com.adobe.xmp:xmpcore:5.1.2'    
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-core:1.3'
