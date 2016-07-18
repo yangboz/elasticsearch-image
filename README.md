@@ -36,7 +36,7 @@ youqian <youqian>
 #### Create Settings
 
 ```sh
-curl -XPUT 'localhost:9200/my_image_index' -d ' {
+curl -XPUT 'localhost:9200/my_index' -d ' {
   "settings": {
     "number_of_shards": 5,
     "number_of_replicas": 1,
@@ -50,7 +50,7 @@ Since elasticsearch 2.2, that is a version checked, index version must set befor
 #### Create Mapping
 
 ```sh
-curl -XPUT 'localhost:9200/my_image_index/my_image_item/_mapping' -d '{
+curl -XPUT 'localhost:9200/my_index/my_image_item/_mapping' -d '{
     "my_image_item": {
         "properties": {
             "my_img": {
