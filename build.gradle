@@ -30,7 +30,7 @@ task plugin(type: Zip) {
 task wrapper(type: Wrapper) {
 
     description 'create gradle wrapper'
-    gradleVersion = '2.14'
+    gradleVersion = '2.14.1'
 }
 
 repositories {
