@@ -5,7 +5,10 @@ The Image Plugin is an Content Based Image Retrieval Plugin for Elasticsearch us
 
 It adds an `image` field type and an `image` query.
 
-Create this plugin using gradle, task `gradle plugin`, then unzip to `%elasticsearch%/plugins` folder, make sure that is not any elastic search image zip file in the plugin folder.
+To create the plugin, open cmd or shell at this directory, enter `gradlew plugin`.
+
+Once the build done, you can find the distribution in build/distribution directory, unzip this file to `%elasticsearch%/plugins/elasticsearch-image-x.x.x` where the x is the version number.
+
 
 
 |     Image Plugin          |  elasticsearch    | Release date |
