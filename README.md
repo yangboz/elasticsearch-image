@@ -13,6 +13,7 @@ Once the build done, you can find the distribution in build/distribution directo
 
 |     Image Plugin          |  elasticsearch    | Release date |
 |---------------------------|-------------------|:------------:|
+| 2.4.1                     | 2.4.1             | 2016-10-28   |
 | 2.4.0                     | 2.4.0             | 2016-09-28   |
 | 2.3.4                     | 2.3.4             | 2016-07-18   |
 | 2.3.3                     | 2.3.3             | 2016-06-13   |
@@ -202,6 +203,11 @@ See [Large image data sets with LIRE ?some new numbers](http://www.semanticmetad
 | index.image.ignore_metadata_error| ignore errors happened during extract metadata from image | True |
 
 ## ChangeLog
+
+#### 2.4.0 (2016-10-28)
+- upgrade to 2.4.1
+- remove support from maven, because is hard to remember update the dependency, if you using Maven for eclipse, please install buildship gradle plugin, it should work as expected.
+
 
 #### 2.4.0 (2016-09-28)
 - upgrade to 2.4.0
