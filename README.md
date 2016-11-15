@@ -72,11 +72,11 @@ curl -XPUT 'localhost:9200/my_index/my_image_item/_mapping' -d '{
                 "metadata": {
                     "jpeg.image_width": {
                         "type": "string",
-                        "store": "yes"
+                        "store": true
                     },
                     "jpeg.image_height": {
                         "type": "string",
-                        "store": "yes"
+                        "store": true
                     }
                 }
             }
@@ -96,14 +96,14 @@ because the index mapping for `LSH` is not specific and created. If you not spec
 
 #### Index Image
 ```sh
-curl -XPOST 'localhost:9200/test/test' -d '{
+curl -XPOST 'localhost:9200/my_index/my_image_item' -d '{
     "my_img": "... base64 encoded image ..."
 }'
 ```
 
 #### Search Image
 ```sh
-curl -XPOST 'localhost:9200/test/test/_search' -d '{
+curl -XPOST 'localhost:9200/my_index/my_image_item/_search' -d '{
 	"from": 0,
     "size": 3,
     "query": {
@@ -130,14 +130,14 @@ curl -XPOST 'localhost:9200/test/test/_search' -d '{
 
 #### Search Image using existing image in index
 ```sh
-curl -XPOST 'localhost:9200/test/test/_search' -d '{ 	
+curl -XPOST 'localhost:9200/my_index/my_image_item/_search' -d '{ 	
     "query": {
         "image": {
             "my_img": {
                 "feature": "CEDD",
-                "index": "test",
-                "type": "test",
-                "id": "image1",
+                "index": "my_index",
+                "type": "my_image_item",
+                "id": "AVhncJrxPPTbdIXOof1F",
                 "hash": "BIT_SAMPLING"
             }
         }
