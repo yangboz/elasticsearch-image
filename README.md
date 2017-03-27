@@ -1,6 +1,8 @@
 Image Plugin for Elasticsearch
 ==============================
 
+[![Build Status](http://118.190.3.169:8080/job/elasticsearch-image/badge/icon)](http://118.190.3.169:8080/job/elasticsearch-image/)
+
 The Image Plugin is an Content Based Image Retrieval Plugin for Elasticsearch using [LIRE (Lucene Image Retrieval)](https://github.com/dermotte/lire). It allows users to index images and search for similar images.
 
 It adds an `image` field type and an `image` query.
