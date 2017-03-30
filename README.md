@@ -74,11 +74,11 @@ curl -XPUT 'localhost:9200/my_index/my_image_item/_mapping' -d '{
                 "metadata": {
                     "jpeg.image_width": {
                         "type": "string",
-                        "store": true
+                        "store": "yes"
                     },
                     "jpeg.image_height": {
                         "type": "string",
-                        "store": true
+                        "store": "yes"
                     }
                 }
             }
@@ -114,8 +114,7 @@ curl -XPOST 'localhost:9200/my_index/my_image_item/_search' -d '{
                 "feature": "CEDD",
                 "image": "... base64 encoded image to search ...",
                 "hash": "BIT_SAMPLING",
-                "boost": 2.1,
-                "limit": 100
+                "boost": 2.1
             }
         }
     }
